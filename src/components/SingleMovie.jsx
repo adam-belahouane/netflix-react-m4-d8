@@ -8,6 +8,7 @@ import {
   Button,
   Alert,
 } from "react-bootstrap";
+import {Link} from "react-router-dom";
 import CommentsList from "./CommentsList";
 
 class SingleMovie extends Component {
@@ -89,6 +90,8 @@ class SingleMovie extends Component {
   render() {
     return (
       <Col className="mb-2" key={this.props.data.imdbID}>
+        <div>
+        <Link to={`/details/${this.props.data.imdbID}`}>
         <img
           className="img-fluid"
           src={this.props.data.Poster}
@@ -98,6 +101,10 @@ class SingleMovie extends Component {
             this.fetchComments(this.props.data.imdbID);
           }}
         />
+        
+        {/* <button className="btn btn-danger">Details</button> */}
+        </Link>
+        </div>
         <Modal
           show={this.state.selected}
           onHide={() => this.setState({ selected: !this.state.selected })}

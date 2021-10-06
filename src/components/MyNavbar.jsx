@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Navbar, Nav, InputGroup, FormControl } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
 class MyNavbar extends Component {
   state = {
@@ -65,4 +66,4 @@ class MyNavbar extends Component {
   }
 }
 
-export default MyNavbar;
+export default withRouter(MyNavbar);

@@ -1,0 +1,17 @@
+.s {
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  .s::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+      overflow-x: hidden;
+  }
+
+  img {
+      height: auto;
+      width: 25vw;
+  }
+  

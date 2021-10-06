@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
 const MyFooter = () => (
   <footer>
@@ -123,4 +124,4 @@ const MyFooter = () => (
   </footer>
 );
 
-export default MyFooter;
+export default withRouter(MyFooter);
